@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
         // 入力によって表示する画像を変える
         prefDataStore.getString("name").ifPresent(name ->
         {if ("a".equals(name)) {
-            binding.textView.setText("Aの画像");
+            binding.textView.setText("前回保存されたのはAの画像");
             binding.imageView2.setImageResource(R.drawable.antigravity);
-        }else if ("b".equals(name)) {
-            binding.textView.setText("Bの画像");
+        }else if ("n".equals(name)) {
+            binding.textView.setText("前回保存されたのはNの画像");
             binding.imageView2.setImageResource(R.drawable.baseline_cable_24);
         }else {
-            binding.textView.setText("知らない画像");
+            binding.textView.setText("前回保存されたのは知らない画像");
             binding.imageView2.setImageResource(R.drawable.ic_launcher_foreground);
         }});
 
@@ -80,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
             String text = binding.editTextText.getText().toString();
             if ("a".equals(text)) {
                 binding.imageView2.setImageResource(R.drawable.antigravity);
-                binding.textView.setText("Aの画像");
-            }else if ("b".equals(text)) {
+                binding.textView.setText("現在表示しているのはAの画像");
+            }else if ("n".equals(text)) {
                 binding.imageView2.setImageResource(R.drawable.baseline_cable_24);
-                binding.textView.setText("Bの画像");
+                binding.textView.setText("現在表示しているのはNの画像");
             }else {
                 binding.imageView2.setImageResource((R.drawable.ic_launcher_foreground));
-                binding.textView.setText("unknown");
+                binding.textView.setText("現在表示しているのは知らない画像です");
             }
             prefDataStore.setString("name",text);
         });
