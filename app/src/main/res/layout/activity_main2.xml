@@ -15,7 +15,6 @@
         android:layout_marginRight="20dp"
         android:textSize="50sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constrainStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
@@ -52,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toTopOf="@id/button_9"
-        app:layout_constraintStart_toEndtOf="@id/button_9"
+        app:layout_constraintStart_toEndOf="@id/button_9"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
@@ -89,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toTopOf="@id/button_6"
-        app:layout_constraintStart_toEndtOf="@id/button_6"
+        app:layout_constraintStart_toEndOf="@id/button_6"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
@@ -126,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toTopOf="@id/button_3"
-        app:layout_constraintStart_toEndtOf="@id/button_3"
+        app:layout_constraintStart_toEndOf="@id/button_3"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
@@ -163,7 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         app:layout_constraintTop_toTopOf="@id/button_equal"
-        app:layout_constraintStart_toEndtOf="@id/button_equal"
+        app:layout_constraintStart_toEndOf="@id/button_equal"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
