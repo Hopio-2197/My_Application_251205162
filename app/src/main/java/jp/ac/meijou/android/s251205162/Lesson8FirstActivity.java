@@ -1,6 +1,7 @@
 package jp.ac.meijou.android.s251205162;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 
@@ -10,17 +11,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import jp.ac.meijou.android.s251205162.databinding.ActivityLesson8SecondBinding;
+import jp.ac.meijou.android.s251205162.databinding.ActivityLesson8FirstBinding;
 
-public class Lesson8SecondActivity extends AppCompatActivity {
+public class Lesson8FirstActivity extends AppCompatActivity {
 
-    private ActivityLesson8SecondBinding binding;
+    private ActivityLesson8FirstBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding = ActivityLesson8SecondBinding.inflate(getLayoutInflater());
+        binding = ActivityLesson8FirstBinding.inflate(getLayoutInflater());
         // setContentView(R.layout.activity_lesson8_second);
         setContentView(binding.getRoot());
         ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
@@ -29,13 +30,17 @@ public class Lesson8SecondActivity extends AppCompatActivity {
             return insets;
         });
 
+        // 明示的intent
         binding.lesson8Button1.setOnClickListener(view -> {
-            var intent = new Intent(this, Lesson8SecondActivity.class);
+            var intent = new Intent(this, MainActivity2.class);
             startActivity(intent);
         });
 
+        // 暗黙的intent
         binding.lesson8Button2.setOnClickListener(view -> {
-            var intent = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
+            var intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.yahoo.co.jp"));
             startActivity(intent);
         });
     }

@@ -5,22 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Lesson8SecondActivity">
+    tools:context=".Lesson8FirstActivity">
 
     <Button
         android:id="@+id/lesson8Button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ボタン1"
+        android:text="明示的intent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/lesson8Button2"/>
+        app:layout_constraintEnd_toStartOf="@id/lesson8Button2"/>
 
     <Button
         android:id="@+id/lesson8Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ボタン2"
+        android:text="暗黙的intent"
         app:layout_constraintTop_toTopOf="@id/lesson8Button1"
         app:layout_constraintStart_toEndOf="@id/lesson8Button1"
         app:layout_constraintEnd_toEndOf="parent"/>
