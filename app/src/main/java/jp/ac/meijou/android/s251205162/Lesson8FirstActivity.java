@@ -43,5 +43,11 @@ public class Lesson8FirstActivity extends AppCompatActivity {
             intent.setData(Uri.parse("https://www.yahoo.co.jp"));
             startActivity(intent);
         });
+
+        binding.ButtonSend.setOnClickListener(view -> {
+            var intent = new Intent();
+            intent.putExtra("greeting","Hello");
+            startActivity(intent);
+        });
     }
 }
